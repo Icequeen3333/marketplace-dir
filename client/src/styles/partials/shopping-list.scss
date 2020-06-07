@@ -1,0 +1,147 @@
+.shopping-list {
+  button {
+    &:hover {
+      background-color: var(--white);
+    }
+  }
+
+  hr {
+    height: 1px;
+    border: none;
+    background-color: var(--dark-grey);
+  }
+
+  &__container {
+    background-color: var(--light-grey);
+    border: solid 1px var(--black);
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    margin: 1em;
+    max-height: 50vh;
+    min-width: 250px;
+    overflow: scroll;
+    padding: 1rem;
+    position: fixed;
+    right: 0;
+    width: 25vw;
+    z-index: 2;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    & > h3 {
+      display: inline;
+    }
+
+    button {
+      &:hover {
+        background-color: var(--white);
+      }
+    }
+  }
+
+  &__delete-all {
+    border-radius: 0;
+    font-size: 0.75rem;
+    margin: 0;
+    padding: 0.25rem;
+  }
+
+  &__item {
+    display: flex;
+    list-style: none;
+    margin: 0.25em auto;
+
+    &--checked {
+      background-color: (var(--light-grey));
+      filter: opacity(0.5);
+
+      & > div > span {
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  &__quantity {
+    background-color: var(--dark-grey);
+    color: var(--white);
+    display: inline;
+    font-weight: bold;
+    margin: 0 0.25rem;
+    padding: 0.25rem;
+  }
+
+  &__name {
+    cursor: pointer;
+    font-weight: 100;
+    width: 100%;
+    &:hover {
+      background-color: var(--white);
+    }
+  }
+
+  &__edit-quantity {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__plus-minus {
+    border-radius: 0;
+    height: 50%;
+    margin: 1px;
+    padding: 0 0.1rem;
+
+    &:hover {
+      border: solid 1px var(--black);
+    }
+  }
+
+  &__new-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem 0;
+
+    button {
+      border-radius: 0;
+      margin: 0 0.25rem;
+    }
+
+    input[type="number"] {
+      border: none;
+      width: 15%;
+    }
+    input[type="text"] {
+      background-color: var(--light-grey);
+      border: solid 1px var(--dark-grey);
+      color: var(--black);
+      display: block;
+      font-family: Avenir, Helvetica, Arial, sans-serif;
+      font-size: 1rem;
+      outline: none;
+      padding: 0.5rem;
+      width: 60%;
+
+      &::placeholder {
+        color: var(--black);
+      }
+
+      &:hover {
+        background-color: var(--dark-grey);
+        border-color: var(--black);
+      }
+
+      &:focus {
+        background-color: var(--black);
+        border-color: var(--dark-grey);
+        color: var(--white);
+        &::placeholder {
+          color: var(--light-grey);
+        }
+      }
+    }
+  }
+}

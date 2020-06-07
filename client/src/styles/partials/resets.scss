@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  transition: all ease 0.3s;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--black);
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}

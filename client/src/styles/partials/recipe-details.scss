@@ -1,0 +1,145 @@
+.selected-recipe {
+  &-container {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    left: 0;
+    padding: 4em 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+  }
+
+  display: grid;
+  grid-template-areas: "header header" "meal-type meal-type" "serves-time serves-time" "image image" "ingredients method";
+  background-color: var(--white);
+  border: solid 1px var(--black);
+  border-radius: 10px;
+  color: var(--black);
+  margin: auto;
+  max-height: 80vh;
+  min-height: 50vh;
+  min-width: 300px;
+  overflow: scroll;
+  top: 6rem;
+  width: 60vw;
+
+  &__header {
+    background-color: var(--light-grey);
+    display: flex;
+    grid-area: header;
+    justify-content: space-between;
+    margin: 0;
+    position: sticky;
+    top: 0;
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin: 0.5em;
+  }
+
+  &__meal-type {
+    background-color: var(--dark-grey);
+    border: solid 1px var(--black);
+    color: var(--white);
+    margin: 0 1rem;
+    padding: 0 1rem;
+
+    &-container {
+      display: flex;
+      font-weight: 700;
+      grid-area: meal-type;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+  }
+
+  &__btn--close {
+    border-radius: 10px;
+    height: 50%;
+    margin: 0.5em;
+    padding: 0.5em;
+
+    &:hover {
+      background-color: var(--white);
+    }
+  }
+
+  &__image {
+    border-radius: 10px;
+    grid-area: image;
+    margin: 1rem auto;
+    max-height: 50vh;
+  }
+
+  &__serves-time {
+    display: flex;
+    font-weight: 700;
+    grid-area: serves-time;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+  }
+
+  &__subheading {
+    font-size: 1.5rem;
+  }
+
+  &__ingredients {
+    grid-area: ingredients;
+    padding: 1rem;
+    width: 30vw;
+
+    &-item {
+      display: flex;
+      list-style-type: none;
+      margin: 1rem 0.25rem 0 0;
+    }
+  }
+
+  &__method {
+    grid-area: method;
+    padding: 1rem;
+    width: 30vw;
+
+    &-item {
+      margin: 1rem 0;
+    }
+  }
+
+  &__add-button {
+    border-radius: 0px;
+    margin: 0 0.5rem 0 0;
+    padding: 0 0.1rem;
+
+    &--all {
+      @extend .selected-recipe__add-button;
+      padding: 0.25rem;
+    }
+  }
+
+  @media (max-width: 750px) {
+    grid-template-areas: "header" "meal-type" "serves-time" "image" "ingredients" "method";
+    width: 80%;
+
+    &__ingredients {
+      width: 100%;
+    }
+    &__method {
+      width: 100%;
+      &-item {
+        margin: 1rem 2rem;
+      }
+    }
+  }
+}
+
+.button--delete {
+  background-color: var(--red);
+  color: var(--white);
+
+  &:hover {
+    color: var(--red);
+  }
+}

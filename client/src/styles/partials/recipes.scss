@@ -1,0 +1,88 @@
+.recipes {
+  &__container {
+    margin: auto;
+    max-width: 1200px;
+  }
+
+  &__header {
+    background-color: var(--light-grey);
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  &__cards-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 1rem 0;
+  }
+
+  &-card {
+    background-color: var(--light-grey);
+    border: solid 1px var(--dark-grey);
+    border-radius: 10px;
+    height: 50vh;
+    margin: 0 0.25rem 1rem 0.25rem;
+    min-width: 250px;
+    overflow: hidden;
+    width: 30%;
+
+    @media (max-width: 500px) {
+      width: 80%;
+    }
+
+    &:hover {
+      background-color: var(--black);
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+      color: var(--light-grey);
+      cursor: pointer;
+      transform: scale(1.03);
+      transition: all ease 0.2s;
+    }
+
+    &:active {
+      background-color: var(--dark-grey);
+      transform: scale(0.99);
+    }
+
+    &__title-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__title {
+      font-size: 1.5rem;
+      font-weight: 100;
+      margin: 1rem;
+      transition: initial;
+      width: 90%;
+    }
+
+    &__detail-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 0.25rem;
+    }
+
+    &__time {
+      align-self: flex-end;
+      color: var(--dark-grey);
+      font-weight: 700;
+    }
+
+    &__meal-type {
+      align-self: flex-end;
+      color: var(--dark-grey);
+      font-size: 0.75rem;
+      font-weight: 100;
+    }
+
+    &__image {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+header {
+  align-items: center;
+  background-color: var(--light-grey);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+
+  & > p {
+    font-size: 3rem;
+    font-weight: 900;
+
+    @media (max-width: 500px) {
+      font-size: 2rem;
+    }
+  }
+
+  button {
+    &:hover {
+      background-color: var(--white);
+    }
+  }
+}
+.shopping-list-container {
+  cursor: pointer;
+  height: 4.1rem;
+  z-index: 2;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.shopping-list-count {
+  background-color: var(--dark-grey);
+  border: 1px solid var(--black);
+  border-radius: 100%;
+  bottom: 5rem;
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  left: 2rem;
+  padding: 0.25rem 0.25rem;
+  position: relative;
+  text-align: center;
+  width: 1.75rem;
+}
