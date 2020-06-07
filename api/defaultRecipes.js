@@ -123,7 +123,8 @@ const defaultRecipes = [
             "Ocean Sculptures - $10",
             "Paintings of water - $9",
         ],
-        "image": "https://target.scene7.com/is/image/Target/GUEST_abc031f1-2751-4401-8e72-1638ffc25c91?wid=488&hei=488&fmt=pjpeg",
+        "image": "https://github.com/Icequeen3333/marketplace-dir/blob/master/api/img/bottle.jpg?raw=true",
+        
         "dateAdded": "",
         "title": "Hydration nation",
         "serves": 4,
