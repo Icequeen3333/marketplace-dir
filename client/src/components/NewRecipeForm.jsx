@@ -42,13 +42,13 @@ function NewRecipeForm(props) {
       }
     } else {
       switch (inputName) {
-        case "ingredients":
+        case "Products":
           props.setNewRecipe(prevValue => ({
             ...prevValue,
             ingredients: inputText.split("\n")
           }));
           break;
-        case "method":
+        case "Location/Prices":
           props.setNewRecipe(prevValue => ({
             ...prevValue,
             method: inputText.split("\n")
@@ -142,20 +142,20 @@ function NewRecipeForm(props) {
             <div className="new-recipe-form__checkbox-container">
               <input
                 type="checkbox"
-                name="Lunch"
-                id="checkbox-lunch"
+                name="Toys"
+                id="checkbox-Toys"
                 onChange={handleInput}
               />
-              <label htmlFor="checkbox-lunch">Lunch</label>
+              <label htmlFor="checkbox-lunch">Toys</label>
             </div>
             <div className="new-recipe-form__checkbox-container">
               <input
                 type="checkbox"
-                name="Dinner"
-                id="checkbox-dinner"
+                name="Extras"
+                id="checkbox-Extras"
                 onChange={handleInput}
               />
-              <label htmlFor="checkbox-dinner">Dinner</label>
+              <label htmlFor="checkbox-Extras">Extras</label>
             </div>
           </div>
           <div className="new-recipe-form__small-inputs">
