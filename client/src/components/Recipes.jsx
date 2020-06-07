@@ -53,7 +53,7 @@ function Recipes(props) {
                     <h3 className="recipes-card__title">{recipe.title}</h3>
                     <div className="recipes-card__detail-container">
                       {recipe.time && (
-                        <p className="recipes-card__time">{recipe.time}min</p>
+                        <p className="recipes-card__time">${recipe.time}</p>
                       )}
                       {recipe.mealType &&
                         recipe.mealType.map((item, index) => {

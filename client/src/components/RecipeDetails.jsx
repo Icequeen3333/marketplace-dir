@@ -52,7 +52,7 @@ function RecipeDetails(props) {
         </div>
         <div className="selected-recipe__serves-time">
           {props.recipe.serves && <p>Serves {props.recipe.serves}</p>}
-          {props.recipe.time && <p>{props.recipe.time}min</p>}
+          {props.recipe.time && <p>{props.recipe.time}</p>}
         </div>
         <img
           className="selected-recipe__image"

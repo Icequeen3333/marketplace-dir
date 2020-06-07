@@ -13,7 +13,7 @@ const defaultRecipes = [
         "dateAdded": "",
         "title": "Lacies Lemonade",
         "serves": 10,
-        "time": 10,
+        "time": 2,
         "mealType": ["Food"]
     },
     {
@@ -33,7 +33,7 @@ const defaultRecipes = [
         "dateAdded": "",
         "title": "Paper Please",
         "serves": 4,
-        "time": 90,
+        "time": 3,
         "mealType": ["Toys", "Extras"]
     },
     {
@@ -53,7 +53,7 @@ const defaultRecipes = [
         "dateAdded": "",
         "title": "Slimetatsic",
         "serves": 2,
-        "time": 10,
+        "time": 4,
         "mealType": ["Toys"]
     },
     {
@@ -79,7 +79,7 @@ const defaultRecipes = [
         "dateAdded": "",
         "title": "Sugar, Spice, and Everything Nice",
         "serves": 2,
-        "time": 45,
+        "time": 3,
         "mealType": ["Food"]
     },
     {
@@ -101,7 +101,7 @@ const defaultRecipes = [
         "dateAdded": "",
         "title": "The Icebox",
         "serves": 4,
-        "time": 35,
+        "time": 4,
         "mealType": ["Food"]
     },
     {
@@ -127,7 +127,7 @@ const defaultRecipes = [
         "dateAdded": "",
         "title": "Hydration nation",
         "serves": 4,
-        "time": 75,
+        "time": 10,
         "mealType": ["Food", "Extras"]
     }
 ]

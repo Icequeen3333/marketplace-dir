@@ -175,7 +175,7 @@ function NewRecipeForm(props) {
               id="recipe-time"
               value={props.newRecipe.time}
               onChange={handleInput}
-              placeholder="Time (minutes)"
+              placeholder="Time ($)"
               autoComplete="off"
               step="5"
               min="0"

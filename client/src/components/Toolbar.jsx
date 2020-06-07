@@ -52,7 +52,7 @@ function Toolbar(props) {
 
   function filterByTime(e) {
     setFilterRange(e.target.value);
-    const maxTime = recipesByTime[0].time + 10;
+    const maxTime = recipesByTime[0].time ;
     inputElement.setAttribute("max", maxTime);
     if (searchTerm === "") {
       recipesFilteredByTime = props.filteredRecipes.filter((recipe) => {
@@ -135,18 +135,18 @@ function Toolbar(props) {
         </button>
       </div>
       <div className="toolbar__filters">
-        <label htmlFor="filter-time">Cooking time</label>
+        <label htmlFor="filter-time">Max Price</label>
         <input
           type="range"
           name="filter-time"
           id="filter-time"
-          min="5"
-          max="1000"
-          step="5"
+          min="0"
+          max="10"
+          step=".5"
           value={filterRange}
           onChange={filterByTime}
         />
-        <p>{filterRange === "all" ? "All" : `${filterRange} minutes`}</p>
+        <p>{filterRange === "all" ? "All" : `$${filterRange}`}</p>
       </div>
       <form onSubmit={searchRecipes} action="">
         <label htmlFor="search-products">Search products</label>
