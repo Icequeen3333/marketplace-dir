@@ -60,7 +60,7 @@ function ProductDetails(props) {
           alt="recipe"
         />
         <div className="selected-recipe__ingredients">
-          <h4 className="selected-recipe__subheading">Ingredients</h4>
+          <h4 className="selected-recipe__subheading">Products</h4>
           <button
             onClick={addAllToShoppingList}
             className="selected-recipe__add-button--all"
@@ -83,7 +83,7 @@ function ProductDetails(props) {
           </ul>
         </div>
         <div className="selected-recipe__method">
-          <h4 className="selected-recipe__subheading">Method</h4>
+          <h4 className="selected-recipe__subheading">Product pricing and location</h4>
           <ol>
             {props.recipe.method.map((item, index) => (
               <li className="selected-recipe__method-item" key={index}>
@@ -92,9 +92,9 @@ function ProductDetails(props) {
             ))}
           </ol>
         </div>
-        <button>Edit recipe</button>
+        <button>Edit table</button>
         <button className="button--delete" onClick={deleteRecipe}>
-          Delete recipe
+          Delete table
         </button>
       </div>
     </div>

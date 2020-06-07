@@ -44,7 +44,7 @@ function Toolbar(props) {
     }
   }
 
-  const recipesByTime = allRecipes.sort((a, b) => {
+  const productsByPrice = allRecipes.sort((a, b) => {
     return a.time < b.time ? 1 : -1;
   });
   const inputElement = document.getElementById("filter-time");
@@ -52,7 +52,7 @@ function Toolbar(props) {
 
   function filterByTime(e) {
     setFilterRange(e.target.value);
-    const maxTime = recipesByTime[0].time ;
+    const maxTime = productsByPrice[0].time ;
     inputElement.setAttribute("max", maxTime);
     if (searchTerm === "") {
       recipesFilteredByTime = props.filteredRecipes.filter((recipe) => {
@@ -67,7 +67,7 @@ function Toolbar(props) {
     }
   }
 
-  function handleSearchInput(e) {
+  function handleSearchTableInput(e) {
     const input = e.target.value;
     setSearchTerm(input);
     if (input === "") {
@@ -149,9 +149,9 @@ function Toolbar(props) {
         <p>{filterRange === "all" ? "All" : `$${filterRange}`}</p>
       </div>
       <form onSubmit={searchRecipes} action="">
-        <label htmlFor="search-products">Search products</label>
+        <label htmlFor="search-products">Search table</label>
         <input
-          onChange={handleSearchInput}
+          onChange={handleSearchTableInput}
           type="text"
           name="search-products"
           id="search-products"
