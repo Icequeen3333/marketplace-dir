@@ -3,6 +3,7 @@ import React, { useState } from "react";
 function Toolbar(props) {
   const [currentFilter, setCurrentFilter] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
+  const [searchProduct, setSearchProduct] = useState("");
   const [filterRange, setFilterRange] = useState("all");
   const allRecipes = [...props.allRecipes];
 
@@ -86,7 +87,29 @@ function Toolbar(props) {
       props.setRecipes(searched);
     }
   }
+  function handleSearchProductInput(e) {
+    const input = e.target.value;
+    setSearchProduct(input);
+    if (input === "") {
+      props.setSearchedProducts(props.filteredRecipes);
+      props.setRecipes(props.filteredRecipes);
+    } else {
+      const searched = props.filteredRecipes.filter((recipe) => {
+        var lowerCaseNames = recipe.ingredients.map(function(value) {
+          return value.toLowerCase();
+        });
 
+        return lowerCaseNames.indexOf(input.toLowerCase()) >= 0 ||
+        lowerCaseNames.some((ingredients) =>
+          ingredients.includes(input.toLowerCase())
+          )
+          ? true
+          : false;
+      });
+      props.setSearchedProducts(searched);
+      props.setRecipes(searched);
+    }
+  }
   function searchRecipes(e) {
     if (e) {
       e.preventDefault();
@@ -107,7 +130,26 @@ function Toolbar(props) {
       }
     }
   }
-
+  function searchProducts(e) {
+    if (e) {
+      e.preventDefault();
+    } else {
+      if (searchProduct === "") {
+        props.setRecipes(props.filteredRecipes);
+      } else {
+        const searched = props.filteredRecipes.filter((recipe) => {
+          return (
+            recipe.title.toLowerCase().includes(searchProduct.toLowerCase()) ||
+            recipe.ingredients.some((ingredient) =>
+              ingredient.includes(searchProduct.toLowerCase())
+            )
+          );
+        });
+        props.setSearchedRecipes(searched);
+        props.setRecipes(searched);
+      }
+    }
+  }
   return (
     <div className="toolbar">
       <div className="toolbar__filters">
@@ -149,14 +191,25 @@ function Toolbar(props) {
         <p>{filterRange === "all" ? "All" : `$${filterRange}`}</p>
       </div>
       <form onSubmit={searchRecipes} action="">
-        <label htmlFor="search-products">Search table</label>
+        <label htmlFor="search-table">Search table</label>
         <input
           onChange={handleSearchTableInput}
+          type="text"
+          name="search-table"
+          id="search-table"
+          autoComplete="off"
+          value={searchTerm}
+        />
+      </form>
+      <form onSubmit={searchProducts} action="">
+        <label htmlFor="search-products">Search products</label>
+        <input
+          onChange={handleSearchProductInput}
           type="text"
           name="search-products"
           id="search-products"
           autoComplete="off"
-          value={searchTerm}
+          value={searchProduct}
         />
       </form>
     </div>

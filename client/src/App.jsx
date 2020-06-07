@@ -25,12 +25,14 @@ function App() {
   });
   const [filteredRecipes, setFilteredRecipes] = useState([]);
   const [searchedRecipes, setSearchedRecipes] = useState([]);
+  const [searchedProducts, setSearchedProducts] = useState([]);
 
   function setInitialRecipes(r) {
     setRecipes(r);
     setAllRecipes(r);
     setFilteredRecipes(r);
     setSearchedRecipes(r);
+    setSearchedProducts(r);
   }
 
   useEffect(() => {
@@ -124,6 +126,8 @@ function App() {
         setFilteredRecipes={setFilteredRecipes}
         searchedRecipes={searchedRecipes}
         setSearchedRecipes={setSearchedRecipes}
+        searchedProducts={searchedProducts}
+        setSearchedProducts={setSearchedProducts}
       />
       {isNewRecipeForm && (
         <NewRecipeForm
