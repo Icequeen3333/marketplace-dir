@@ -1,6 +1,13 @@
-# marketplace directory
+# Marketplace directory
 
 Marketplace directory and shopping cart, built using React and Express with MongoDB/Mongoose database.
+
+
+# To do list 
+
+Calculate the costs of each into the shopping cart
+Make it easier to edit locations of tables
+Be able to add products and costs easier
 
 ## To start
 
