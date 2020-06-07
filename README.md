@@ -17,6 +17,8 @@ Be able to add products and costs easier
 git clone https://github.com/Icequeen3333/marketplace-directory.git
 ```
 
+This is based on https://github.com/philmartin1/foodstuff.git
+
 ### Run in two terminal tabs
 
 ```cli
