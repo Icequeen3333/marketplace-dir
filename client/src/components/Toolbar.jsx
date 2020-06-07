@@ -149,12 +149,12 @@ function Toolbar(props) {
         <p>{filterRange === "all" ? "All" : `${filterRange} minutes`}</p>
       </div>
       <form onSubmit={searchRecipes} action="">
-        <label htmlFor="search-recipes">Search recipes</label>
+        <label htmlFor="search-products">Search products</label>
         <input
           onChange={handleSearchInput}
           type="text"
-          name="search-recipes"
-          id="search-recipes"
+          name="search-products"
+          id="search-products"
           autoComplete="off"
           value={searchTerm}
         />

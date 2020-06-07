@@ -3,23 +3,23 @@ const defaultRecipes = [
         "ingredients": [
             "3 large free-range eggs",
             "115 g plain flour",
-            "1 heaped teaspoon baking powder",
-            "140 ml milk"
+            "Seed starters",
+            "Lemonade"
         ],
         "method": [
-            "First separate the eggs, putting the whites into one bowl and the yolks into another.",
-            "Add the flour, baking powder and milk to the yolks and mix to a smooth thick batter.",
-            "Whisk the whites with 1 pinch of sea salt until they form stiff peaks, then fold into the batter – it is now ready to use.",
+            "Lacies Lemonade is in the right back corner.",
+            "Lemonade - $0.50 per cup",
+            "Seed starters - $2 per 3 starters",
             "Heat a non-stick pan over a medium heat, pour some of the batter into the pan and cook for a couple of minutes, or until it starts to look golden and firm.",
             "At this point sprinkle your chosen flavouring (see below) onto the uncooked side before loosening with a spatula and flipping the pancake over. Continue frying until both sides are golden.",
             "You can make these pancakes large or small, depending on what you prefer. Serve them with a drizzle of maple syrup, or even with some butter or crème fraîche. If you choose to sprinkle with a flavouring, try one of these... fresh corn from the cob, crispy bacon or pancetta, blueberries, banana, stewed apple, grated chocolate – anything else you can imagine..."
         ],
         "image": "https://img.jamieoliver.com/jamieoliver/recipe-database/oldImages/xtra_med/378_1_1438763691.jpg?tr=w-430",
         "dateAdded": "",
-        "title": "Pancakes",
-        "serves": 4,
-        "time": 20,
-        "mealType": ["Breakfast"]
+        "title": "Lacies Lemonade",
+        "serves": 10,
+        "time": 10,
+        "mealType": ["Food"]
     },
     {
         "ingredients": [

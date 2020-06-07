@@ -33,9 +33,9 @@ function Recipes(props) {
 
   return (
     <div className="recipes__container">
-      <h1 className="recipes__header">Recipes</h1>
+      <h1 className="recipes__header">Tables</h1>
       <div className="recipes__cards-section">
-        {props.recipes.length === 0 && <h3>No recipes found.</h3>}
+        {props.recipes.length === 0 && <h3>No tables carrying that product found.</h3>}
         {props.recipes.length > 0 &&
           props.recipes
             .sort((a, b) => {

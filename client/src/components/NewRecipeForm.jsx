@@ -6,9 +6,9 @@ function NewRecipeForm(props) {
   function handleInput(e) {
     const { value: inputText, name: inputName } = e.target;
     if (
-      inputName === "Breakfast" ||
-      inputName === "Lunch" ||
-      inputName === "Dinner"
+      inputName === "Food" ||
+      inputName === "Toys" ||
+      inputName === "Extras"
     ) {
       let mealType = [...props.newRecipe.mealType];
       let index = mealType.indexOf(inputName);
@@ -137,7 +137,7 @@ function NewRecipeForm(props) {
                 id="checkbox-breakfast"
                 onChange={handleInput}
               />
-              <label htmlFor="checkbox-breakfast">Breakfast</label>
+              <label htmlFor="checkbox-breakfast">Food</label>
             </div>
             <div className="new-recipe-form__checkbox-container">
               <input
