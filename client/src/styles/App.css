@@ -459,7 +459,7 @@ header button:hover {
 
 .selected-recipe {
   display: grid;
-  grid-template-areas: "header header" "meal-type meal-type" "serves-time serves-time" "image image" "ingredients method";
+  grid-template-areas: "header header" "meal-type meal-type" "tableNumber-time tableNumber-time" "image image" "ingredients method";
   background-color: var(--white);
   border: solid 1px var(--black);
   border-radius: 10px;
@@ -525,10 +525,10 @@ header button:hover {
   margin: 1rem auto;
   max-height: 50vh;
 }
-.selected-recipe__serves-time {
+.selected-recipe__tableNumber-time {
   display: flex;
   font-weight: 700;
-  grid-area: serves-time;
+  grid-area: tableNumber-time;
   justify-content: space-evenly;
   margin-top: 1rem;
 }
@@ -563,7 +563,7 @@ header button:hover {
 }
 @media (max-width: 750px) {
   .selected-recipe {
-    grid-template-areas: "header" "meal-type" "serves-time" "image" "ingredients" "method";
+    grid-template-areas: "header" "meal-type" "tableNumber-time" "image" "ingredients" "method";
     width: 80%;
   }
   .selected-recipe__ingredients {

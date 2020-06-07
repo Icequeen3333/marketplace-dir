@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 
-mongoose.connect("mongodb://localhost:27017/foodstuff", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
+mongoose.connect("mongodb://localhost:27017/products", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -24,7 +24,7 @@ const recipeSchema = new mongoose.Schema({
     ingredients: [String],
     method: [String],
     mealType: [String],
-    serves: Number,
+    tableNumber: Number,
     time: Number,
     image: { type: String, default: "https://image.flaticon.com/icons/svg/926/926255.svg" },
 })
@@ -43,7 +43,7 @@ app.get("/recipes", function (req, res, next) {
                         title: recipe.title,
                         ingredients: recipe.ingredients,
                         method: recipe.method,
-                        serves: recipe.serves,
+                        tableNumber: recipe.tableNumber,
                         time: recipe.time,
                         image: recipe.image,
                         mealType: recipe.mealType
@@ -73,7 +73,7 @@ app.post("/recipes/add", function (req, res, next) {
                 title: recipe.title,
                 ingredients: recipe.ingredients,
                 method: recipe.method,
-                serves: recipe.serves,
+                tableNumber: recipe.tableNumber,
                 time: recipe.time,
                 mealType: recipe.mealType
             });
@@ -84,7 +84,7 @@ app.post("/recipes/add", function (req, res, next) {
                 title: recipe.title,
                 ingredients: recipe.ingredients,
                 method: recipe.method,
-                serves: recipe.serves,
+                tableNumber: recipe.tableNumber,
                 time: recipe.time,
                 image: recipe.image,
                 mealType: recipe.mealType

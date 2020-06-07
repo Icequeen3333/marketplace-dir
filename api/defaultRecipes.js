@@ -12,7 +12,7 @@ const defaultRecipes = [
         "image": "https://github.com/Icequeen3333/marketplace-dir/blob/master/api/img/lemonade.jpg?raw=true",
         "dateAdded": "",
         "title": "Lacies Lemonade",
-        "serves": 10,
+        "tableNumber": 6,
         "time": 2,
         "mealType": ["Food"]
     },
@@ -32,7 +32,7 @@ const defaultRecipes = [
         "image": "https://github.com/Icequeen3333/marketplace-dir/blob/master/api/img/origami.jpg?raw=true",
         "dateAdded": "",
         "title": "Paper Please",
-        "serves": 4,
+        "tableNumber": 5,
         "time": 3,
         "mealType": ["Toys", "Extras"]
     },
@@ -52,7 +52,7 @@ const defaultRecipes = [
         "image": "https://github.com/Icequeen3333/marketplace-dir/blob/master/api/img/slime.jpg?raw=true",
         "dateAdded": "",
         "title": "Slimetatsic",
-        "serves": 2,
+        "tableNumber": 4,
         "time": 4,
         "mealType": ["Toys"]
     },
@@ -78,7 +78,7 @@ const defaultRecipes = [
         "image": "https://github.com/Icequeen3333/marketplace-dir/blob/master/api/img/cake.jpg?raw=true",
         "dateAdded": "",
         "title": "Sugar, Spice, and Everything Nice",
-        "serves": 2,
+        "tableNumber": 3,
         "time": 3,
         "mealType": ["Food"]
     },
@@ -100,7 +100,7 @@ const defaultRecipes = [
         "image": "https://github.com/Icequeen3333/marketplace-dir/blob/master/api/img/Ice-Pops-Image.jpg?raw=true",
         "dateAdded": "",
         "title": "The Icebox",
-        "serves": 4,
+        "tableNumber": 2,
         "time": 4,
         "mealType": ["Food"]
     },
@@ -127,9 +127,9 @@ const defaultRecipes = [
         
         "dateAdded": "",
         "title": "Hydration nation",
-        "serves": 4,
+        "tableNumber": 1,
         "time": 10,
-        "mealType": ["Food", "Extras"]
+        "mealType": [ "Food","Extras"]
     }
 ]
 

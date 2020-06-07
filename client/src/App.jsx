@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import ShoppingList from "./components/ShoppingList";
 import Toolbar from "./components/Toolbar";
 import NewRecipeForm from "./components/NewRecipeForm";
-import Recipes from "./components/Recipes";
+import Products from "./components/Products";
 import Footer from "./components/Footer";
 import "./styles/App.css";
 
@@ -18,7 +18,7 @@ function App() {
     title: "",
     ingredients: [],
     method: [],
-    serves: "",
+    tableNumber: "",
     time: "",
     image: "",
     mealType: []
@@ -135,7 +135,7 @@ function App() {
           setIsNewRecipeForm={setIsNewRecipeForm}
         />
       )}
-      <Recipes
+      <Products
         setShoppingList={setShoppingList}
         shoppingList={shoppingList}
         recipes={recipes}

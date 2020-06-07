@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import RecipeDetails from "./RecipeDetails";
+import ProductDetails from "./ProductDetails";
 
-function Recipes(props) {
-  const [recipeDetails, setRecipeDetails] = useState(false);
-  const [selectedRecipe, setSelectedRecipe] = useState(null);
+function Products(props) {
+  const [productDetails, setProductDetails] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   function showDetails(e) {
     const recipe = e.target;
     const recipeId = recipe.closest(".recipes-card").getAttribute("id");
-    setSelectedRecipe(props.recipes[recipeId]);
-    setRecipeDetails(true);
+    setSelectedProduct(props.recipes[recipeId]);
+    setProductDetails(true);
   }
 
   function deleteAll() {
@@ -24,7 +24,7 @@ function Recipes(props) {
       title: "",
       ingredients: [],
       method: [],
-      serves: "",
+      tableNumber: "",
       time: "",
       image: "",
       mealType: []
@@ -77,16 +77,16 @@ function Recipes(props) {
       <button className="button--delete" onClick={deleteAll}>
         Delete All
       </button>
-      {recipeDetails && (
-        <RecipeDetails
+      {productDetails && (
+        <ProductDetails
           addToShoppingList={props.addToShoppingList}
-          recipe={selectedRecipe}
+          recipe={selectedProduct}
           setRecipes={props.setRecipes}
-          showRecipe={setRecipeDetails}
+          showRecipe={setProductDetails}
         />
       )}
     </div>
   );
 }
 
-export default Recipes;
+export default Products;

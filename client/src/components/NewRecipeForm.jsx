@@ -90,7 +90,7 @@ function NewRecipeForm(props) {
         title: "",
         ingredients: [],
         method: [],
-        serves: "",
+        tableNumber: "",
         time: "",
         image: ""
       });
@@ -161,11 +161,11 @@ function NewRecipeForm(props) {
           <div className="new-recipe-form__small-inputs">
             <input
               type="number"
-              name="serves"
-              id="recipe-serves"
-              value={props.newRecipe.serves}
+              name="tableNumber"
+              id="recipe-tableNumber"
+              value={props.newRecipe.tableNumber}
               onChange={handleInput}
-              placeholder="Serves"
+              placeholder="tableNumber"
               autoComplete="off"
               min="0"
             />
@@ -188,7 +188,7 @@ function NewRecipeForm(props) {
             rows="5"
             value={currentIngredients}
             onChange={handleInput}
-            placeholder="Ingredients (Add each on a separate line)"
+            placeholder="Products (Add each on a separate line)"
             autoComplete="off"
           ></textarea>
           <textarea
@@ -198,7 +198,7 @@ function NewRecipeForm(props) {
             rows="5"
             value={currentMethod}
             onChange={handleInput}
-            placeholder="Method (Add each on a separate line)"
+            placeholder="Location / products (Add each on a separate line)"
             autoComplete="off"
           ></textarea>
           <input
@@ -220,7 +220,7 @@ function NewRecipeForm(props) {
         </form>
         {isIncomplete && (
           <div className="new-recipe-form__warning">
-            <p>Recipe must have a title, ingredients and a method</p>
+            <p>Table must have a title, products and a location/price</p>
             <button onClick={closeWarning}>OK</button>
           </div>
         )}

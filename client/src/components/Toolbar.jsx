@@ -127,7 +127,7 @@ function Toolbar(props) {
           Toys
         </button>
         <button
-          name="Extra"
+          name="Extras"
           className="toolbar__filter"
           onClick={filterMealType}
         >

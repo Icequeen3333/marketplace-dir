@@ -1,6 +1,6 @@
 import React from "react";
 
-function RecipeDetails(props) {
+function ProductDetails(props) {
   function closeRecipe() {
     props.showRecipe(false);
   }
@@ -50,9 +50,9 @@ function RecipeDetails(props) {
               );
             })}
         </div>
-        <div className="selected-recipe__serves-time">
-          {props.recipe.serves && <p>Serves {props.recipe.serves}</p>}
-          {props.recipe.time && <p>{props.recipe.time}</p>}
+        <div className="selected-recipe__tableNumber-time">
+          {props.recipe.tableNumber && <p>Table number {props.recipe.tableNumber}</p>}
+          {props.recipe.time && <p>Max price:${props.recipe.time}</p>}
         </div>
         <img
           className="selected-recipe__image"
@@ -101,4 +101,4 @@ function RecipeDetails(props) {
   );
 }
 
-export default RecipeDetails;
+export default ProductDetails;
