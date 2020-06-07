@@ -123,7 +123,7 @@ const defaultRecipes = [
             "Ocean Sculptures - $10",
             "Paintings of water - $9",
         ],
-        "image": "https://img.jamieoliver.com/jamieoliver/recipe-database/oldImages/xtra_med/1418_1_1436873314.jpg?tr=w-430",
+        "image": "https://target.scene7.com/is/image/Target/GUEST_abc031f1-2751-4401-8e72-1638ffc25c91?wid=488&hei=488&fmt=pjpeg",
         "dateAdded": "",
         "title": "Hydration nation",
         "serves": 4,

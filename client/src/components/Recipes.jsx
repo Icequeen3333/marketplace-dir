@@ -5,7 +5,7 @@ function Recipes(props) {
   const [recipeDetails, setRecipeDetails] = useState(false);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
-  function showRecipeDetails(e) {
+  function showDetails(e) {
     const recipe = e.target;
     const recipeId = recipe.closest(".recipes-card").getAttribute("id");
     setSelectedRecipe(props.recipes[recipeId]);
@@ -47,7 +47,7 @@ function Recipes(props) {
                   className="recipes-card"
                   id={index}
                   key={index}
-                  onClick={showRecipeDetails}
+                  onClick={showDetails}
                 >
                   <div className="recipes-card__title-container">
                     <h3 className="recipes-card__title">{recipe.title}</h3>
