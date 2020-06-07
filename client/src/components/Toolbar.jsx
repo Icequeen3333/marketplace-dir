@@ -111,27 +111,27 @@ function Toolbar(props) {
   return (
     <div className="toolbar">
       <div className="toolbar__filters">
-        <p>Filter meal type</p>
+        <p>Filter product type</p>
         <button
-          name="Breakfast"
+          name="Food"
           className="toolbar__filter"
           onClick={filterMealType}
         >
-          Breakfast
+          Food
         </button>
         <button
-          name="Lunch"
+          name="Toys"
           className="toolbar__filter"
           onClick={filterMealType}
         >
-          Lunch
+          Toys
         </button>
         <button
-          name="Dinner"
+          name="Extra"
           className="toolbar__filter"
           onClick={filterMealType}
         >
-          Dinner
+          Extras
         </button>
       </div>
       <div className="toolbar__filters">

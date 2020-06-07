@@ -7,14 +7,14 @@ function Header(props) {
 
   return (
     <header>
-      <p>Foodstuff</p>
+      <p>Marketplace</p>
       <div style={{ display: "flex", alignItems: "center" }}>
         <div>
           <button
             style={{ margin: "0 2rem 0 1rem" }}
             onClick={props.activateNewRecipe}
           >
-            Add Recipe
+            Add Another Table
           </button>
         </div>
         <div className="shopping-list-container">
